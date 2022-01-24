@@ -1,4 +1,4 @@
-Topic: Real Time Bus Tracker
+# Real Time Bus Tracker
 
 Description: Using real-time data from MBTA, this project keeps track of the movement of route 1 bus (between Nubian Station & Harvard Square). Bus location is updated every 15 seconds.
 

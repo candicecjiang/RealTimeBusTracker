@@ -49,7 +49,7 @@ async function move() {
     marker.remove();
     move();
     
-  }, 10000);
+  }, 15000);
 }
 
 move();

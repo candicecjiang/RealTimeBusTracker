@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiY2FuZGljZWoiLCJhIjoiY2t5ODN0eXVnMDFsOTJ2b2JheXVieDZ0YiJ9.h8dy8R76HrbgRS918lA4Iw';
+mapboxgl.accessToken = '// Your token goes here';
 
 // This is the map instance
 let map = new mapboxgl.Map({

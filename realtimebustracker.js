@@ -1,5 +1,4 @@
-
-mapboxgl.accessToken = '// Your token goes here';
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2FuZGljZWoiLCJhIjoiY2t5ODN0eXVnMDFsOTJ2b2JheXVieDZ0YiJ9.h8dy8R76HrbgRS918lA4Iw';
 
 // This is the map instance
 let map = new mapboxgl.Map({
@@ -19,7 +18,9 @@ let endMarker = new mapboxgl.Marker();
 endMarker.setLngLat([-71.1193, 42.3734]);
 endMarker.addTo(map);
 
-// Import real-time data from MBTA
+// Import real-time data from MBTA, 
+// fetch the location of the first bus in data,
+// and mark the bus on the map.
 async function getBusLocation() {
   const url = 'https://api-v3.mbta.com/vehicles?filter[route]=1&include=trip';
   const responce = await fetch(url);
@@ -35,10 +36,8 @@ async function getBusLocation() {
   return location;
 }
 
+// Update data from MBTA every 15 seconds
 async function move() {
-  // TODO: move the marker on the map every 1000ms. Use the function marker.setLngLat() to update the marker coordinates
-  // Use counter to access bus stops in the array busStops
-  // Make sure you call move() after you increment the counter.
   const location = await getBusLocation();
   console.log(new Date());
   let marker = new mapboxgl.Marker();

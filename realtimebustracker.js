@@ -1,3 +1,4 @@
+mapboxgl.accessToken = 'Your token goes here';
 
 // This is the map instance
 let map = new mapboxgl.Map({
